@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Pierreeeeeeeee</title>
+<style>
+
+.colo{
+	background-color:#00F;
+ width:70px;
+		height:70px;
+	}
+	.vvv{
+		width:45px;
+		height:45px;
+		font-size:20px;
+		
+		outline:none;
+		
+
+      		
+		}
+		.fff{
+			background-color:#666
+			
+			
+			}
+		
+			.uuu{
+				width:300px;
+				height:300px;
+				
+				}
+				.ooo{
+					width:480px;
+					height:40px;
+					font-size:36px;
+				
+				}
+
+				
+</style>
+
+
+
+</head>
+
+<body>
+
+<table  border="5" cellspacing="5" cellpadding="30"  bordercolor="#666666" class="uuu">
+  
+  <div class="calc">
+  <tr>
+    <input  style=" text-align:end; " name="caaal" id="caaal" type="text" placeholder="0"   size="64"  " class="ooo"   />
+    
+    </tr>
+  
+   
+  <tr >
+    <th ><button onclick="display('+') " class="vvv" class="fff" >+</button></th>
+    <th><button onclick="display('-')" class="vvv" class="fff">-</button></th>
+    <th><button onclick="display('*')" class="vvv" class="fff">*</button></th>
+    <th ><button onclick="display('/')" class="vvv" class="fff">/</button></th>
+ </tr>
+
+ <tr>
+   <td><button  onclick="display('7')" class="vvv" class="fff">7</button></td>
+   <td><button onclick="display('8')" class="vvv" class="fff">8</button></td>
+   <td><button onclick="display('9')" class="vvv" class="fff">9</button></td>
+    <td   rowspan="4"  bgcolor="#0000FF" class="colo" ><button onclick="calc('=')" style="height:350px;" class="colo">=</button></td>
+   
+ </tr>
+ 
+ <tr>
+   <td><button onclick="display('4')" class="vvv" class="fff">4</button></td>
+   <td><button onclick="display('5')" class="vvv" class="fff">5</button></td>
+   <td><button onclick="display('6')" class="vvv" class="fff">6</button></td>
+  
+ </tr>
+
+ <tr>
+   <td><button onclick="display('1')" class="vvv" class="fff">1</button></td>
+   <td><button onclick="display('2')" class="vvv" class="fff">2</button></td>
+   <td><button onclick="display('3')" class="vvv" class="fff">3</button></td>
+ </tr>
+
+ <tr>
+   <td><button onclick="display('0')" class="vvv" class="fff">0</button></td>
+   <td><button onclick="display('.')" class="vvv" class="fff">.</button></td>
+   <th><button onclick="Clear()" class="vvv" class="fff">C</button></th>
+ </tr>
+ 
+ 
+ 
+
+</div>
+</table>
+<div id="show"></div>
+
+
+<script>
+	var output=document.getElementById("caaal")
+	function display(numb)
+	{
+		
+	  output.value+=numb;	  
+		
+		
+	}
+	var res;
+	function Clear()
+	{
+		output.value="";
+		
+		}
+		function calc(){
+			
+			try
+			{
+				output.value=eval(output.value);
+				res=res+Date()+"<br/>";
+				document.getElementById("show").innerHTML=res;
+				}
+				catch(err)
+				{
+					output.value="ErroR"
+					}
+			
+			}
+  
+	
+  </script>
+
+
+
+
+
+
+
+
+</body>
+
+
+
+</html>
